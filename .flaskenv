@@ -1,0 +1,2 @@
+FLASK_APP=busca.py
+FLASK_ENV=development

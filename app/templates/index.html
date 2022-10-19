@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>homepage</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+            color: white;
+        }
+        h1{
+            font-size: 80px;
+            text-align: center;
+        }
+        form{
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <header><h1>Busca com Custo Uniforme</h1></header><hr>
+
+    <section>
+    <center><img src = 'static\mapa.png' height="420px" width="300px" title="mapa" alt="Mapa"></center><br><br>
+    </section>
+    <section>
+
+        {% set mensagens = get_flashed_messages() %}
+        {% if mensagens %}
+            <script> 
+                
+                alert("Foram inseridas uma ou mais cidades inválidas!")
+                
+            </script>
+        {% endif %}
+
+
+        <form method="post" action="/answer">
+            <p>Cidade de partida: <input type="text" id="partida" name="partida" autocomplete="off" required></p>
+            <p>Cidade de destino: <input type="text" id="destino" name="destino" autocomplete="off" required></p>
+            <p><button type="submit">Enviar</button></p>
+            
+        </form>
+    </section>
+
+    <footer><hr>
+        <h2>Grupo: </h2>
+        <ul>
+            <li><i>Christian Soares Pereira dos Santos - 2122130002</i></li>
+            <li><i>Lucas Oliveira Ferreira - 2122130028</i></li>
+            <li><i>Lucas de Oliveira Rodrigues - 2122130038</i></li>
+            <li><i>Guilherme De Oliveira Camargo - 2122130020</i></li>
+            <li><i>Thiago Araujo Costa - 2112130046</i></li>
+        </ul>
+</footer>
+</body>
+</html>
